@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <!--SmartEdu Core Menu-->
+        <menuitem id="se_menu_root" name="SmartEdu Core" sequence="-100" />
+        <!--SmartEdu Student Menu-->
+        <menuitem id="se_menu_student" name="Student" parent="se_menu_root" action="act_open_se_student_view" />
+        <!--SmartEdu Configuration Menu-->
+        <menuitem id="se_menu_config" name="Configuration" parent="se_menu_root" />
+
+        <menuitem id="se_menu_config_general" name="General Management" parent="se_menu_config" />
+
+        <!--Address Type-->
+        <menuitem id="se_menu_address_type" name="Address Type" parent="se_menu_config" action="se_address_type_action_view" />
+
+        <!--Report-->
+        <menuitem id="se_menu_report" name="Report" parent="se_menu_root" action="action_admission_requisition_report_print_wizard" />
+
+
+    </data>
+</odoo>

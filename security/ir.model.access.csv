@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_se_student,se_student,model_se_student,base.group_user,1,1,1,1
+
+access_se_contact,se_contact,model_se_contact,base.group_user,1,1,1,1
+access_se_address_type,se_address_type,model_se_address_type,base.group_user,1,1,1,1
+
+access_se_academic_educational_information,se_academic_educational_information,model_se_academic_educational_information,base.group_user,1,1,1,1
+access_se_academic_education_type,se_academic_education_type,model_se_academic_education_type,base.group_user,1,1,1,1
+
+access_se_admission_date_selector,se_admission_date_selector,model_se_admission_date_selector,base.group_user,1,1,1,1

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+<!--        form view-->
+        <record id="se_address_type_form_view" model="ir.ui.view">
+            <field name="name">se_address_type_form_view</field>
+            <field name="model">se.address.type</field>
+            <field name="arch" type="xml">
+                <form string="se_address_ty_form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!--        tree view-->
+        <record id="se_address_type_tree_view" model="ir.ui.view">
+            <field name="name">se_address_type_tree_view</field>
+            <field name="model">se.address.type</field>
+            <field name="arch" type="xml">
+                <tree string="_tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="se_address_type_action_view" model="ir.actions.act_window">
+            <field name="name">Address Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">se.address.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="se_address_type_tree_view"/>
+        </record>
+    </data>
+</odoo>

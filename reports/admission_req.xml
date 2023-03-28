@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data >
+        <report id="report_admission_requisition" model="se.student" report_type="qweb-pdf" string="Admission Requisition Report" name="se_education_core-main.report_admission_req" file="se_education_core-main.report_admission_req" attachment_use="False"/>
+
+        <template id="report_admission_req">
+            <t t-call="web.html_container">
+
+                <t t-call="web.external_layout">
+                    <div class="page container">
+                        <!-- Report title -->
+                        <p class="h5 text-center mt-3 mb-5 font-weight-bold">
+                            <u>Addmission Requisition Report</u>
+                        </p>
+                        <!-- <t t-if="not requisitions">
+                            <div class="row" style="margin-left: 2px;">
+                                <div class="col-md-12 text-center">
+                                    <p>There are currently no information in selected date range for your  requisition report. </p>
+                                </div>
+                            </div>
+                        </t> -->
+                        <t>
+                            <t t-set="serial_no" t-value="1"/>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Mobile</th>
+                                        <th>Blood-Group</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach='requisition' t-as='requisition'>
+                                        <tr>
+                                            <td>
+                                                <span class="span" t-esc="requisition['birth_date']"/>
+                                            </td>
+                                            <td>
+                                                <span class="span" t-esc="requisition['name']"/>
+                                            </td>
+                                            <td>
+                                                <span class="span" t-esc="requisition['email']"/>
+                                            </td>
+                                            <td>
+                                                <span class="span" t-esc="requisition['mobile']"/>
+                                            </td>
+                                            <td>
+                                                <span class="span" t-esc="requisition['blood_group']"/>
+                                            </td>
+                                        </tr>
+                                        <t t-set="serial_no" t-value="serial_no+1"/>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+                    </div>
+
+                </t>
+
+            </t>
+
+        </template>
+
+
+    </data>
+
+
+</odoo>

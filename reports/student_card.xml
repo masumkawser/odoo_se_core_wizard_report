@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_student_cards">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h1 style="text-align:center">Student Card </h1>
+                        <div class="col-xs-7 col-md-7 col-sm-7 col-7">
+
+                            <h5>Student Name:
+                                <b>
+                                    <span t-if="o.name" t-esc="o.name"/>
+                                </b>
+                            </h5>
+                            <h5>Gender:                           
+                                <b>
+                                    <span t-if="o.gender" t-esc="o.gender"/>
+                                </b>
+                            </h5>
+                            <h5>Birth Date:                        
+                                <b>
+                                    <span t-if="o.birth_date" t-esc="o.birth_date"/>
+                                </b>
+                            </h5>
+                            <h5>Email:                   
+                                <b>
+                                    <span t-if="o.email" t-esc="o.email"/>
+                                </b>
+                            </h5>
+                            <h5>Mobie:   
+                                <b>
+                                    <span t-if="o.mobile" t-esc="o.mobile"/>
+                                </b>
+                            </h5>
+                        </div>
+
+                        <div class="row" style="margin-top: 50px;">
+                            <div class="col-xs-12 col-md-12 col-12">
+                                <p style="font-weight: bold;">N.B: Please preserve this receipt for your safety.</p>
+                                <!-- <hr style="border-top: 1px solid black;"/> -->
+                                <ul class="list-inline text-center">
+                                    <li class="list-inline-item">Phone: <span>+8801991195535</span>
+                                    </li>
+                                    <li class="list-inline-item">Email: <span>pd@daffodilvarsity.edu.bd</span>
+                                    </li>
+                                    <li class="list-inline-item">Web: <span>http://diu.edu.bd</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_student">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="se_education_core-main.report_student_cards">
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
