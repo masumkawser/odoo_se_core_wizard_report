@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <report id="report_student_card" model="se.student" report_type="qweb-pdf" string="Student Card" name="se_education_core-main.report_student" file="se_education_core-main.report_student" attachment_use="False" />
+    <report id="report_student_card"
+        model="se.student" 
+        report_type="qweb-pdf" 
+        string="Student Card" 
+        name="se_education_core-main.report_student"
+        file="se_education_core-main.report_student" 
+        attachment_use="False" />
 
 
 </odoo>
